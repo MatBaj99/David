@@ -10,7 +10,7 @@
   int ENB = 3; //Setting pin 3 as a PWM for B
   int carSpeed = 250; //Setting speed to 250  THIS VALUE DEFINES THE PWM OF THE SIGNAL 255 = 5V
   int slowcarSpeed = 210; //Setting slow speed to 125 for more complex manouvers
-  //int BatteryLevel = A0; //Setting the battery level to pin 22, later this will be set by the battery monitoring
+  //int BatteryLevel = A0; //Setting the battery level to pin A0, later this will be set by the battery monitoring
   //int Leaving = 22;
 
   
