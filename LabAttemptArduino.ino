@@ -87,46 +87,7 @@ void stop() {
   Serial.println("Stop!");
 }
 
-/*void BackRightIR(){
-  if((digitalRead(BR)==HIGH) && (digitalRead(BL)==HIGH)){
-    Serial.println("BACK DETECT");
-  }
-  else if((digitalRead(BR)==HIGH) && (digitalRead(BL)==LOW)){
-    Serial.println("Back Right Active - STOP");
-  }    
-}
-
-void BackLeftIR(){
-   if((digitalRead(BR)==HIGH) && (digitalRead(BL)==HIGH)){
-    Serial.println("BACK DETECT");
-  }
-  else if((digitalRead(BR)==LOW) && (digitalRead(BL)==HIGH)){
-    Serial.println("Back Left Active - STOP");
-  }
-}
-
-void FrontRightIR(){
-  if((digitalRead(FR)==HIGH) && (digitalRead(FL)==HIGH)){
-    Serial.println("FRONT DETECT");
-  }
-  else if((digitalRead(FR)==HIGH) && (digitalRead(FL)==LOW)){
-    Serial.println("Front Right Active - STOP");
-  }
-}
-
-void FrontLeftIR(){
-  if((digitalRead(FR)==HIGH) && (digitalRead(FL)==HIGH)){
-    Serial.println("FRONT DETECT");
-  }
-  else if((digitalRead(FR)==LOW) && (digitalRead(FL)==HIGH)){
-    Serial.println("Front Left Active - STOP");
-  }
-}
-*/
 void obstacleavoidance(){
-  //while(analogRead(BatteryLevel) > 1000){
-  //Serial.println("Obstacle avoid started");
-  //delay(1000);
   if((digitalRead(FR)==HIGH) && (digitalRead(FL)==HIGH)){
     Serial.println("FRONT DETECT");
     stop();
@@ -174,29 +135,6 @@ void obstacleavoidance(){
     delay(10);
 }
 }
-//ReturnHome();
-
-
-/*void ReturnHome(){
-  //while(analogRead(BatteryLevel) < 511){
-    Serial.println("Returning Home");
-    delay(1000);
-  //}
-  DockingRoutine(); 
-}
-void DockingRoutine(){
-  Serial.println("Docking Started!!!"); // White line sensors will detect the white lines on the floor and the box for where it needs to dock
-  delay(1000);
-  Serial.println("Charging commenced");
-  delay(1000);
-  Serial.println("Charging Complete");
-  delay(1000);
-  Serial.println("Leaving docking station");
-  delay(1000);
-  digitalWrite(Leaving,HIGH);
-  delay(1000);
-  loop();
-}*/
 
 void loop() {
   // put your main code here, to run repeatedly:
